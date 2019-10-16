@@ -1,5 +1,6 @@
 class VoidGui::Control
   getter position : Point = Point.new
+  getter layer : Float32 = 0.0_f32
 
   property? enabled : Bool = true
   property? visible : Bool = true
