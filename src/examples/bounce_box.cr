@@ -1,25 +1,4 @@
-# void_gui
-
-A terminal graphics drawing programing using ANSI escape sequences and unicode!
-
-## Installation
-
-1. Add the dependency to your `shard.yml`:
-
-   ```yaml
-   dependencies:
-     void_gui:
-       github: redcodefinal/void_gui
-   ```
-
-2. Run `shards install`
-
-## Usage
-
-Example bouncing box program
-
-```crystal
-require "void_gui"
+require "../void_gui"
 
 Signal::INT.trap do
   puts "CTRL-C INTERRUPT!"
@@ -113,24 +92,6 @@ VoidGui.loop do
 
   pos_x += vel_x
   pos_y += vel_y
+
+  #sleep 0.01
 end
-
-```
-
-TODO: Write more usage instructions here
-
-## Development
-
-TODO: Write development instructions here
-
-## Contributing
-
-1. Fork it (<https://github.com/your-github-user/void_gui/fork>)
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
-
-## Contributors
-
-- [Ian Rash](https://github.com/your-github-user) - creator and maintainer

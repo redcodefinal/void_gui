@@ -39,19 +39,19 @@ lines_diag = {
 
 4.times do |x|
   line = lines_vert[x]
-  VoidGui.line(line[:x1], line[:y1], line[:x2], line[:y2], shade: types[x], fg: colors[x], mode: modes[x])
+  VoidGui.line(line[:x1], line[:y1], line[:x2], line[:y2], char: VoidGui::UNICODE[:block][types[x]], fg: colors[x], mode: modes[x])
   sleep 1
 end
 
 4.times do |x|
   line = lines_hori[x]
-  VoidGui.line(line[:x1], line[:y1], line[:x2], line[:y2], shade: types[x], fg: colors[x], mode: modes[x])
+  VoidGui.line(line[:x1], line[:y1], line[:x2], line[:y2], char: VoidGui::UNICODE[:block][types[x]], fg: colors[x], mode: modes[x])
   sleep 1
 end
 
 4.times do |x|
   line = lines_diag[x]
-  VoidGui.line(line[:x1], line[:y1], line[:x2], line[:y2], shade: types[x], fg: colors[x], mode: modes[x])
+  VoidGui.line(line[:x1], line[:y1], line[:x2], line[:y2], char: VoidGui::UNICODE[:block][types[x]], fg: colors[x], mode: modes[x])
   sleep 1
 end
 

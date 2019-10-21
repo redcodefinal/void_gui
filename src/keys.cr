@@ -124,7 +124,12 @@ module VoidGui
   end
 
   def self.get_key : Array(Key)
-    case get_key_raw
+    translate_keys get_key_raw
+  end
+
+  # TODO: Write this better so it properly detects all chars pressed at once (like asdf)
+  def self.translate_keys(string)
+    case string
     when "\e[A"
       [Key::Up]
     when "\e[B"

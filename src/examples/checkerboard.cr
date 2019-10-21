@@ -31,7 +31,8 @@ color_scheme = :original
 
 filled = true
 
-VoidGui.loop(2) do |screen_size, keys|
+VoidGui.loop(1) do |screen_size, keys|
+  VoidGui.clear_screen(now: true)
   if keys == [VoidGui::Key::Up]
     checker_height += 1 if checker_height < max_height
   elsif keys == [VoidGui::Key::Down]
@@ -64,7 +65,7 @@ VoidGui.loop(2) do |screen_size, keys|
       checker_color = (((checker_x1-BOARD_START)/checker_width) % 2) == (((checker_y1-BOARD_START)/checker_height) % 2)
       color = (checker_color ? color_schemes[color_scheme][:a] : color_schemes[color_scheme][:b])
 
-      VoidGui.box(checker_x1, checker_y1, checker_x2, checker_y2, shade: :full, fg: color, filled: filled)
+      VoidGui.box(checker_x1, checker_y1, checker_x2, checker_y2, fg: color, filled: filled)
       
       checker_x1 += checker_width
       checker_x2 = checker_x1 + checker_width - 1

@@ -21,8 +21,6 @@ loop do
   VoidGui.move_to(0, 0)
   print key
 
-
-
   if key
     if key.includes? VoidGui::Key::Up
       current_item -= 1 if current_item > 0
